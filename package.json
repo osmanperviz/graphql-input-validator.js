@@ -1,0 +1,20 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "graphql input validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "awesome-phonenumber": "2.3.1",
+    "graphql": "14.1.1",
+    "iban": "0.0.12",
+    "jsvat": "1.2.4",
+    "lodash": "4.17.11",
+    "moment": "2.24.0",
+    "validator": "10.11.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
