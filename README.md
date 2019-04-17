@@ -17,7 +17,7 @@ const createUserInputType = new GraphQLInputObjectType({
   fields: {
     email: {
       type: GraphQLString,
-      format: 'email',
+      format: 'name',
       maximumLength: 100,
       normalizeFormat: true
     }
@@ -26,7 +26,7 @@ const createUserInputType = new GraphQLInputObjectType({
 const inputSchema = inputValidator.createSchemaFromInputType(createUserInputType)
 
 const input = {
-  email: 'john.doe@company.com'
+  name: 'jsome cool name'
 }  
 const {cleanedInput, errors} = inputValidator.validateAndFormatInput({input, inputSchema})
 ```
