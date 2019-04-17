@@ -1,6 +1,6 @@
 # input-validator
 
-This package validates and cleans up user input especially for Graph QL servers.
+This package validates and format user input especially for Graph QL servers.
 
 ## Example
 
@@ -10,7 +10,7 @@ const {
   GraphQLInputObjectType,
   GraphQLString
 } = require('graphql')
-const inputValidator = require('@serohtec/input-validator')
+const inputValidator = require('./input-validator')
 
 const createUserInputType = new GraphQLInputObjectType({
   name: 'CreateUserInput',
@@ -23,12 +23,12 @@ const createUserInputType = new GraphQLInputObjectType({
     }
   }
 })
-const inputSchema = inputValidator.createInputSchemaFromInputType(createUserInputType)
+const inputSchema = inputValidator.createSchemaFromInputType(createUserInputType)
 
 const input = {
   email: 'john.doe@company.com'
 }  
-const {cleanedInput, errors} = inputValidator.validateAndCleanInputUp({input, inputSchema})
+const {cleanedInput, errors} = inputValidator.validateAndFormatInput({input, inputSchema})
 ```
 
 ### Supported fields
